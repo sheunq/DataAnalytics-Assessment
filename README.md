@@ -54,7 +54,7 @@ Step 5: subquery 4 - Group By and Count function
 <p> In Step 5, The frequency category was grouped using group by and counted using count function to know the numbers of customer that falls in this category  </p>
 
 
-3. Account Inactivity Alert
+## 3. Account Inactivity Alert
 <p>Scenario: The ops team wants to flag accounts with no inflow transactions for over one year.
 
 Task: Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) </p>
