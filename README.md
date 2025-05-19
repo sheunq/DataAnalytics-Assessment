@@ -3,8 +3,9 @@
 
 
 ## 1. High-Value Customers with Multiple Products
-Scenario: The business wants to identify customers who have both a savings and an investment plan (cross-selling opportunity).
-Task: Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.
+<p> Scenario: The business wants to identify customers who have both a savings and an investment plan (cross-selling opportunity).
+	
+Task: Write a query to find customers with at least one funded savings plan AND one funded investment plan, sorted by total deposits.</p>
 
 step 1: Joining
 In step 1, rows from three tables are joined based on a related column, savings_savingsaccount and users_customuser joined based on a id, while plans_plan and savings based on owner_id
