@@ -43,7 +43,7 @@ a new column was created for the full name of the account owner using concat fun
 step 2: subquery 1 - Concat, Day and Month
 <p> In step 2, the account name was concatinate and two new columns day of the transactions and month of the transactions was extrate from transaction_date </p>
 
-# step 3: subquery 2 - Group By, Count, Round and Distinct
+step 3: subquery 2 - Group By, Count, Round and Distinct
 <p> In Step 3, In order to get the avg_transactions_per_month, name and monthly transaction was grouped using group by
 Afterward,  avg_transactions_per_month was extrated by suming all the transactions performed  in a day for days the transaction was performed using Count, divided by totals days transaction was made  in a month using distinct count </p>
 
