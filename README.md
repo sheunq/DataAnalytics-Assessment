@@ -54,13 +54,7 @@ Step 5: subquery 4 - Group By and Count function
 <p> In Step 5, The frequency category was grouped using group by and counted using count function to know the numbers of customer that falls in this category  </p>
 
 
-
-
-
-
-
-
-## 3. Account Inactivity Alert
+3. Account Inactivity Alert
 <p>Scenario: The ops team wants to flag accounts with no inflow transactions for over one year.
 
 Task: Find all active accounts (savings or investments) with no transactions in the last 1 year (365 days) </p>
@@ -84,24 +78,27 @@ step 5: Subquery4 -  Group By, Max, min and Datediff
 
     
 ## 4. Customer Lifetime Value (CLV) Estimation
-Scenario: Marketing wants to estimate CLV based on account tenure and transaction volume (simplified model).
+
+<p> Scenario: Marketing wants to estimate CLV based on account tenure and transaction volume (simplified model).
 Task: For each customer, assuming the profit_per_transaction is 0.1% of the transaction value, calculate:
 Account tenure (months since signup)
 Total transactions
 Estimated CLV (Assume: CLV = (total_transactions / tenure) * 12 * avg_profit_per_transaction)
-Order by estimated CLV from highest to lowest
+Order by estimated CLV from highest to lowest </p>
 
-# step 5: Subquery4 - Order By
-# in Step 5, estimated_clv was extracted using this formular (Total_transaction / tenure_months) * 12 * avg_profit_per_transaction and sorted in descending order using order by
 
-# step 4: Subquery3 - functions(Count, sum, Max and Min) and Group By 
-# In Step 4: Four new columns was created by grouping  account names, extrated  Total_transaction_profit  by suming (confirmed_amount * 0.001), month_account_created sing min function and last_transaction_month using max on transaction_date 
+Step 1: Joining
+<p> In step 1, rows from two tables are joined based on a related column, savings_savingsaccount and users_customuser joined based on a id </p>
 
-# step 3: Subquery2 - Month
-# In step 3, two colums was created. created_on_customuser_month, the month customer created account and  transaction_date_month, the month transaction was performed
+step 2: Subquery1 - Concat function
+<p> In step 2, a new column was created for the full name of the account owner using concat function </p>
 
-# step 2: Subquery1 - Concat function
-# In step 2, a new column was created for the full name of the account owner using concat function
+step 3: Subquery2 - Month
+<p> In step 3, two colums was created. created_on_customuser_month, the month customer created account and  transaction_date_month, the month transaction was performed </p>
 
-# step 1: Joining
-# In step 1, rows from two tables are joined based on a related column, savings_savingsaccount and users_customuser joined based on a id
+step 4: Subquery3 - functions(Count, sum, Max and Min) and Group By 
+<p> In Step 4: Four new columns was created by grouping  account names, extrated  Total_transaction_profit  by suming (confirmed_amount * 0.001), month_account_created sing min function and last_transaction_month using max on transaction_date </p>
+
+step 5: Subquery4 - Order By
+<p> in Step 5, estimated_clv was extracted using this formular (Total_transaction / tenure_months) * 12 * avg_profit_per_transaction and sorted in descending order using order by<p>
+
